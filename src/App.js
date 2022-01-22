@@ -5,14 +5,36 @@ import List from './components/List/List'
 import Form from './components/Form/Form';
 
 
+const todoItems = [
+  {
+    id:"12398745",
+    title:"groceries",
+    isDone:true
+  },
+  {
+    id:"3457860",
+    title:"laundry",
+    isDone: false
+  },
+  {
+    id:"5678990",
+    title: "meet friends",
+    isDone: true
+  }
+];
+
+
+
 function App() {
   return (
     <div className="App">  
     <Header />
     <Form />
-    <List />
+    <List todos = {todoItems}/>
     </div>
   )
 };
 
 export default App;
+
+
