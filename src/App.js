@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import EditTodo from './components/EditTodo/EditTodo';
 import NewTodoInput from './components/NewTodoInput/NewTodoInput';
 import { useState } from 'react';
+import { newTodo } from './components/NewTodoInput/NewTodoInput';
 
 
 
@@ -33,7 +34,8 @@ function App() {
   const [todoItems, setTodoItems] = useState(TODOS);
 
   const addNewTodo = () => {
-    console.log('submit-test')
+    console.log('test', NewTodo)
+    //TODOS.push
   }
 
   const deleteTodoById = (id) => {
@@ -72,5 +74,6 @@ function App() {
 };
 
 export default App;
+
 
 
