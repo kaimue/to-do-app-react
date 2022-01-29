@@ -31,6 +31,7 @@ function App() {
     <Header />
     <Form />
     <List todos = {todoItems}/>
+    <Footer />
     </div>
   )
 };
