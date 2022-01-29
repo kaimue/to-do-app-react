@@ -4,10 +4,10 @@ function List ({todos}) {
     return (
         <div>
         <ul> 
-            {todos.map(todo => {
+            {todos.map((todo, index) => {
                     return (
                     <li>
-                        {todo.id} - {todo.title} - {todo.isDone}
+                        <Todo key={index} id={todo.id} title={todo.title} isDone={todo.isDone} />
 
                     </li>
                     )
