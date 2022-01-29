@@ -2,7 +2,6 @@
 import './App.css';
 import Header from './components/Header/Header';
 import List from './components/List/List';
-import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import EditTodo from './components/EditTodo/EditTodo';
 import NewTodoInput from './components/NewTodoInput/NewTodoInput';
@@ -33,6 +32,10 @@ function App() {
 
   const [todoItems, setTodoItems] = useState(TODOS);
 
+  const addNewTodo = () => {
+    console.log('submit-test')
+  }
+
   const deleteTodoById = (id) => {
 
     console.log("App deleted!");
@@ -61,8 +64,8 @@ function App() {
   return (
     <div className="App">  
     <Header />
-    <Form />
-    <List todos={todoItems} deleteCallback={deleteTodoById}/>
+    <NewTodoInput addTodo={addNewTodo}/>
+    <List todos={todoItems} addTodo={addNewTodo} deleteCallback={deleteTodoById}/>
     <Footer />
     </div>
   )
