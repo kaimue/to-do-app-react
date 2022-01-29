@@ -6,9 +6,11 @@ import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import EditTodo from './components/EditTodo/EditTodo';
 import NewTodoInput from './components/NewTodoInput/NewTodoInput';
+import { useState } from 'react';
 
 
-const todoItems = [
+
+const TODOS = [
   {
     id:"12398745",
     title:"groceries",
@@ -27,20 +29,40 @@ const todoItems = [
 ];
 
 
-
 function App() {
-  const deleteTodoById = () => {
+
+  const [todoItems, setTodoItems] = useState(TODOS);
+
+  const deleteTodoById = (id) => {
+
     console.log("App deleted!");
+    console.log(id);
+    const removeItem = todoItems.filter((todo) => {
+      return todo.id !== id;
+    });
+    console.log(removeItem);
+    //const newList = removeItem
+    setTodoItems(removeItem);
+  } 
+
+
+  
+
+
+      
+     // if (todo.id !
+     //const removeIndex = todoItems.findIndex( item => item.id === 37 );
+     // remove object
+     //todoItems.splice( removeIndex, 1 );
 
     // Grab the id
     // Remove the id from todosData array
-  };
 
   return (
     <div className="App">  
     <Header />
     <Form />
-    <List todos = {todoItems} deleteCallback={deleteTodoById}/>
+    <List todos={todoItems} deleteCallback={deleteTodoById}/>
     <Footer />
     </div>
   )

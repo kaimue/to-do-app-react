@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./NewTodoInput.css";
 
-function NewTodoInput() {
+function NewTodoInput(addTodo) {
   return (
     <div>
       <input
