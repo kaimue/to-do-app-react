@@ -1,9 +1,11 @@
 
 import './App.css';
-import Header from './components/Header/Header'
-import List from './components/List/List'
-import Form from './components/Form/Form'
+import Header from './components/Header/Header';
+import List from './components/List/List';
+import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
+import EditTodo from './components/EditTodo/EditTodo';
+import NewTodoInput from './components/NewTodoInput/NewTodoInput';
 
 
 const todoItems = [
@@ -27,11 +29,18 @@ const todoItems = [
 
 
 function App() {
+  const deleteTodoById = () => {
+    console.log("App deleted!");
+
+    // Grab the id
+    // Remove the id from todosData array
+  };
+
   return (
     <div className="App">  
     <Header />
     <Form />
-    <List todos = {todoItems}/>
+    <List todos = {todoItems} deleteCallback={deleteTodoById}/>
     <Footer />
     </div>
   )
