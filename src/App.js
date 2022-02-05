@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 import EditTodo from './components/EditTodo/EditTodo';
 import NewTodoInput from './components/NewTodoInput/NewTodoInput';
 import { useState } from 'react';
-import { newTodo } from './components/NewTodoInput/NewTodoInput';
+
 
 
 
@@ -34,7 +34,7 @@ function App() {
   const [todoItems, setTodoItems] = useState(TODOS);
 
   const addNewTodo = () => {
-    console.log('test', NewTodo)
+    console.log('test')
     //TODOS.push
   }
 

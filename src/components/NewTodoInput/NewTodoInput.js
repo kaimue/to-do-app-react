@@ -21,7 +21,6 @@ function NewTodoInput( {addTodo} ) {
       addTodo()
   }
   return (
-    newTodo,
     <form  onSubmit={handleSubmit}>
       <input
         onChange={handleChange}
@@ -38,4 +37,3 @@ function NewTodoInput( {addTodo} ) {
 }
 
 export default NewTodoInput;
-export const newTodo;
