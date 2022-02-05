@@ -3,23 +3,28 @@ import Todo from "../Todo/Todo";
 
 
 
-function NewTodoInput( {addTodo} ) { 
+function NewTodoInput( {addTodo}, todoItems) { 
   const [inputValue, setInputValue] = useState('');
   const handleChange = ( { target } ) => {
       const updatedInput = target.value
       setInputValue(updatedInput)
   }
+  
   const handleSubmit = (event) => {
       event.preventDefault()
-      console.log(event)
-      console.log(event.target[0].value)
+      //console.log(event)
+      //console.log(event.target[0].value)
       const newTodo = {
         id: (Date.now() + Math.random()).toString(),
         title: event.target[0].value, 
         isDone: false
       };
-      addTodo()
-  }
+      console.log(newTodo)
+
+      addTodo(newTodo);
+
+  };
+
   return (
     <form  onSubmit={handleSubmit}>
       <input

@@ -33,9 +33,9 @@ function App() {
 
   const [todoItems, setTodoItems] = useState(TODOS);
 
-  const addNewTodo = () => {
+  const addNewTodo = (todoObject) => {
     console.log('test')
-    //TODOS.push
+    setTodoItems([todoObject, ...todoItems]);
   }
 
   const deleteTodoById = (id) => {
